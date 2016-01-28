@@ -6,6 +6,10 @@
 
 #define DEBUG   1
 
+String statusCheck();
+
+String statusAws, clientName;
+
 SoftwareSerial BLE(BLE_RX, BLE_TX);
 
 void setup() {
@@ -19,11 +23,11 @@ void setup() {
   //testando módulo BLE
   BLE.println("AT");
   delay(500);
-  if ( !BLESlave.find("OK") ) {
-    if (DEBUG) Serial.println("ERRO FATAL: Não foi possível estabelecer comunicação com o módulo BLE!");
+  if ( !BLE.find("OK") ) {
+    if (DEBUG) Serial.println("ERRO FATAL: Não foi possível estabelecer comunicação com o modulo BLE!");
     for(;;);
   } else {
-    if (DEBUG) Serial.println("Comunicação com o módulo BLE realizada.");
+    if (DEBUG) Serial.println("Comunicacao com o modulo BLE realizada.");
   }
 
 }
@@ -33,4 +37,18 @@ void loop() {
   String cmd;
   cmd = BLE.readStringUntil('\n');
 
+  if (cmd.length() >= 5) {
+    if ( cmd.startsWith("START+") ) {
+      clientName = cmd.substring( cmd.indexOf("=") + 1 );      
+    } else if ( cmd.startsWith("STS") ) {
+     BLE.print("STS+");
+     statusAws = statusCheck();
+     BLE.println(statusAws);     
+    }
+  }
 }
+
+String statusCheck() {
+  return "OK";
+}
+
