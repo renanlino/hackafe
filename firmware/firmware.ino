@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 
-#define BLE_RX  4
-#define BLE_TX  5
+#define BLE_RX  5
+#define BLE_TX  4
 #define BLE_EN  6
 
 #define DEBUG   1
@@ -13,6 +13,11 @@ String statusAws, clientName;
 SoftwareSerial BLE(BLE_RX, BLE_TX);
 
 void setup() {
+
+  if (DEBUG) Serial.begin(9600);
+  BLE.begin(9600);
+
+  pinMode(BLE_EN, OUTPUT);
   
   //Resetando o modulo BLE
   digitalWrite(BLE_EN, LOW);
@@ -37,9 +42,15 @@ void loop() {
   String cmd;
   cmd = BLE.readStringUntil('\n');
 
+  if (DEBUG) {
+    Serial.print("RCV: ");
+    Serial.println(cmd);
+  }
+  
+
   if (cmd.length() >= 5) {
     if ( cmd.startsWith("START+") ) {
-      clientName = cmd.substring( cmd.indexOf("=") + 1 );      
+      clientName = cmd.substring( cmd.indexOf("=") + 1 );             
     } else if ( cmd.startsWith("STS") ) {
      BLE.print("STS+");
      statusAws = statusCheck();
