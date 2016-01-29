@@ -18,8 +18,6 @@
 
 #define NUM_READ 10
 
-String statusCheck();
-
 String clientName;
 int buttons[] = {bot1, bot2, bot3};
 
@@ -101,7 +99,6 @@ void loop() {
     if (DEBUG) {
     Serial.print("RCV: ");
     Serial.println(cmd);
-    
     }
     
   }
