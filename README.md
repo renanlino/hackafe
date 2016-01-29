@@ -19,5 +19,7 @@
   * STS+SLEEP: Economia de Energia
 * BUT=N
   * Acionamento do botão N [1-3]
+  * BUT+OK || BUT+ERR:
 * START=client
   * Informa o nome do usuário
+  * START+OK

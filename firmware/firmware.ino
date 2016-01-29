@@ -72,7 +72,8 @@ void loop() {
   if (cmd.length() >= 5) {
     
     if ( cmd.startsWith("START+") ) {
-      clientName = cmd.substring( cmd.indexOf("=") + 1 ); 
+      clientName = cmd.substring( cmd.indexOf("=") + 1 );
+      BLE.println("START+OK"); 
                   
     } else if ( cmd.startsWith("STS") ) {
      BLE.print("STS+");
