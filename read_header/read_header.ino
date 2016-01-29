@@ -1,8 +1,8 @@
-int ledLatVerm = 13;
-int ledLatAmar = 12;
-int ledBotVerd = 11;
-int ledBotAzul = 10;
-int ledBotVerm = A0;
+#define ledLatVerm 13
+#define ledLatAmar 12
+#define ledBotVerd 11
+#define ledBotAzul 10
+#define ledBotVerm A0
 
 #define NUM_READ 10
 
@@ -20,22 +20,20 @@ void setup()
 void loop()
 {
   int ans[5];
-  detectarPiscando(ans);
-  for(int i = 0; i < 5; i++) {
-    Serial.print(ans[i]);
-  }
+  detectarPiscando(ans, 2000);
+  for(int i = 0; i < 5; i++) Serial.print(ans[i]);
   Serial.println();
 }
 
 
 /*
-  Examina o estado dos LEDs durante 1 segundo
+  Examina o estado dos LEDs durante @period milisegundos
   Retorna 1 para ligado fixo;
           0 para desligado fixo;
           2 para piscando;
   Tamanho do vetor ans: 5
 */
-void detectarPiscando(int * ans)
+void detectarPiscando(int * ans, int period)
 {
   int ledLatVermVec[NUM_READ], ledLatAmarVec[NUM_READ], ledBotVerdVec[NUM_READ],
       ledBotAzulVec[NUM_READ], ledBotVermVec[NUM_READ], auxRead, sum;
@@ -47,7 +45,7 @@ void detectarPiscando(int * ans)
     auxRead  = analogRead(ledBotVerm);
     if(auxRead > 300) ledBotVermVec[i] = 1;
     else ledBotVermVec[i] = 0;
-    delay(1000/NUM_READ);
+    delay(period/NUM_READ);
   }
   sum = vecSum(ledLatVermVec, NUM_READ);
   if ( sum == NUM_READ || sum == 0 ) ans[0] = sum/NUM_READ;
