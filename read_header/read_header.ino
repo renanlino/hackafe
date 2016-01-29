@@ -2,10 +2,12 @@ int ledLatVerm = 13;
 int ledLatAmar = 12;
 int ledBotVerd = 11;
 int ledBotAzul = 10;
-int ledBotVerm = 9;
+int ledBotVerm = A0;
 
 int header[5];
+
 int i;
+int auxRead;
 
 void setup()
 {
@@ -17,24 +19,27 @@ void setup()
   Serial.begin(9600);
 }
 
+
 void loop()
 {
-  Serial.println("");
-  delay(100);
-  leHeader();
-  for(i=0; i <= 4; i++)
-  {
-    Serial.print(header[i]);
-  }
-    
+  Serial.println(detectarPiscando());
 }
 
-int leHeader()
+void leHeader( int * array)
 {
-  header[0] = digitalRead(ledLatVerm);
-  header[1] = digitalRead(ledLatAmar);
-  header[2] = digitalRead(ledBotVerd);
-  header[3] = digitalRead(ledBotAzul);
-  header[4] = digitalRead(ledBotVerm);
+  array[0] = digitalRead(ledLatVerm);
+  array[1] = digitalRead(ledLatAmar);
+  array[2] = digitalRead(ledBotVerd);
+  array[3] = digitalRead(ledBotAzul);
+  auxRead  = analogRead(ledBotVerm);
+  if(auxRead > 300) array[4] = 1;
+  else array[4] = 0;
+}
+
+int detectarPiscando()
+{
+  float duracao;
+  duracao = pulseIn(11, HIGH);
+  return duracao;
 }
 
