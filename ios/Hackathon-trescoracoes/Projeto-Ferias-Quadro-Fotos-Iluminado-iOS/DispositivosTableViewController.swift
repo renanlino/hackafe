@@ -19,9 +19,17 @@ var deviceCharacteristics: CBCharacteristic! //Guarda informações importantes 
 var abriuTela:Bool = false
 
 
+@objc protocol DispositivosBluetoothProtocol {
+    func retornaBluetooth(retorno: String)
+    func desconectou()
+}
+
 
 // é Importados todos os delegates para serem colocados na tableView
 class DispositivosTableViewController: UITableViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+    
+    weak var delegate: DispositivosBluetoothProtocol?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,6 +176,9 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
     func peripheral(peripheral: CBPeripheral, didUpdateValueForCharacteristic characteristic: CBCharacteristic, error: NSError?) {
         
         let ret = NSString(data:characteristic.value!, encoding:NSUTF8StringEncoding) as! String
+        
+        self.delegate?.retornaBluetooth(ret)
+        
         print("Retorno - \(ret)")
     }
     
@@ -185,6 +196,10 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
     // Se desconectar comeca a procurar mais uma vez
     func centralManager(central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: NSError?) {
         print("Disconnected")
+        
+        
+        self.delegate?.desconectou()
+        //Caso desconectar chamar o delegate
         central.scanForPeripheralsWithServices(nil, options: nil)
         
         
