@@ -8,8 +8,40 @@
 
 import UIKit
 
-class PrePreparoViewController: UIViewController {
+class PrePreparoViewController: UIViewController, DispositivosBluetoothProtocol {
+    
+    @IBOutlet var datepicker: UIDatePicker!
+    let dispositivosViewController = DispositivosTableViewController()
+    
     override func viewDidLoad() {
+        datepicker.hidden = true
+        dispositivosViewController.delegate = self
+        
+    }
+    
+    func retornaBluetooth(retorno: String) {
+        // Mostra o resultado do bluetooth
+    }
+    
+    func desconectou() {
+        // Se desconectar avisar feedback para a pessoa após o loading
+    }
+    
+    @IBAction func definirHorario(sender: AnyObject) {
+        //datepicker.hidden = false
+    }
+    
+    @IBAction func podePreparar(sender: AnyObject) {
+        let opcao = Singleton.sharedInstance.cafeAtual
+        
+        if opcao == "coffee" {
+            //DispositivosTableViewController.writeValue("BTN=1")
+        } else if opcao == "express" {
+            //DispositivosTableViewController.writeValue("BTN=2")
+        }else if opcao == "tea" {
+            //DispositivosTableViewController.writeValue("BTN=3")
+        }
+        
         
     }
 }

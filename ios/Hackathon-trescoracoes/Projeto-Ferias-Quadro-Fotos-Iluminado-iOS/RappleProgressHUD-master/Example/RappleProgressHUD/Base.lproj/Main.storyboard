@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="RappleProgressHUD_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3P-i6-zsi">
+                                <rect key="frame" x="183" y="159" width="234" height="30"/>
+                                <state key="normal" title="Rapple Modern Progress Indicator"/>
+                                <connections>
+                                    <action selector="startModernProgress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dQK-Py-NCs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Do-57-RWP">
+                                <rect key="frame" x="190" y="220" width="220" height="30"/>
+                                <state key="normal" title="Rapple Apple Progress Indicator"/>
+                                <connections>
+                                    <action selector="startAppleProgress:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LJW-iJ-Avg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R3P-i6-zsi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="139" id="97X-Dx-2pH"/>
+                            <constraint firstItem="R3P-i6-zsi" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Kxb-c6-Dd6"/>
+                            <constraint firstItem="5Do-57-RWP" firstAttribute="top" secondItem="R3P-i6-zsi" secondAttribute="bottom" constant="31" id="SD3-lC-pBe"/>
+                            <constraint firstItem="5Do-57-RWP" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ptp-gA-ULq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="322"/>
+        </scene>
+    </scenes>
+</document>

@@ -16,7 +16,7 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         dispositivosBluetooth.delegate = self
     }
     
-
+    
     
     
     func retornaBluetooth(retorno: String) {
@@ -36,16 +36,14 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         Singleton.sharedInstance.cafeAtual = "coffee"
         print("coffee")
         self.performSegueWithIdentifier("seguePrePreparo", sender: self)
-        //DispositivosTableViewController.writeValue("STS\r\n")
     }
     
     
     @IBAction func buttonExpress(sender: AnyObject) {
         Singleton.sharedInstance.cafeAtual = "express"
-
+        
         print("express")
         self.performSegueWithIdentifier("seguePrePreparo", sender: self)
-        //DispositivosTableViewController.writeValue("BUT=1\r\n")
     }
     
     
@@ -53,15 +51,9 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         print("tea")
         Singleton.sharedInstance.cafeAtual = "tea"
         
-        //DispositivosTableViewController.writeValue("START=client\r\n")
         self.performSegueWithIdentifier("seguePrePreparo", sender: self)
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        
-    }
     
 }

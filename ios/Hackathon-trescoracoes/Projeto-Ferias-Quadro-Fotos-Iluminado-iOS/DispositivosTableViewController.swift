@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreBluetooth
+import PKHUD
+
 
 var activeCentralManager: CBCentralManager? // O que está controlando o Bluetooth
 var peripheralDevice: CBPeripheral? // Dispositivo que será conectado pelo Bluetooth
@@ -34,6 +36,17 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        performSegueWithIdentifier("segueCoffeViewController", sender: self)
+        //        RappleActivityIndicatorView.startAnimatingWithLabel("Carregando...",attributes: RappleAppleAttributes)
+        
+        //RappleActivityIndicatorView.stopAnimating()
+        
+        /*
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
+        PKHUD.sharedHUD.hide(afterDelay: 2.0)
+        */
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -43,11 +56,13 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
     
     //Acontece quando a tela ainda não carregou os elementos
     override func viewWillAppear(animated: Bool) {
-    
+        
     }
     
     @IBAction func conectaCafeteira(sender: AnyObject) {
-
+        RappleActivityIndicatorView.startAnimatingWithLabel("Carregando...",attributes: RappleAppleAttributes)
+        
+        
         abriuTela = false
         // Limpa os elementos do dicionario
         devices.removeAll(keepCapacity: false)
@@ -56,7 +71,7 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
         // Inicializa o Manager/Dispositivo mestre (meu iphone) Bluetooth
         activeCentralManager = CBCentralManager(delegate: self, queue: nil)
         
-
+        
     }
     
     // Atualizador
@@ -96,10 +111,24 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
         
         //Pego o UUID do dispositivo que vou me conectar
         if let name = peripheral.name {
+            
+            
             // Preenche o dicionario atraves do UUID como indice, com o dado do periferico(BLE)
             if(devices[name] == nil){
+                
                 devices[name] = peripheral
-                devicesRSSI.append(RSSI) // Adiciona na lista da tableview
+                devicesRSSI.append(RSSI) // Adiciona na lista da tableview'
+                
+                
+                
+                if verificaSeAchouDispositivo() {
+                    
+                    print("Achou")
+                }else{
+                    print("Não achou")
+                }
+                
+                
             }
             
             
@@ -121,6 +150,63 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
         }
         
         
+        
+    }
+    
+    
+    func verificaSeAchouDispositivo() -> Bool {
+        // Se estiver pelo menos um dispositvo no vetor (proximo do raio do iPhone)
+        if (devices.count > 0){
+            
+            // Coloca os valores do dicionario em um array
+            let discoveredPeripheralArray = Array(devices.values.lazy)
+            
+            // Pega o valor correspondente do clique no vetor de dispositivos
+            
+            for dev in discoveredPeripheralArray {
+                if dev.name == "Flex" {
+                    
+                    // Delega o disposivo conectado na classe (conecta do dispositivo)
+                    if let peripheralDevice = peripheralDevice{
+                        peripheralDevice.delegate = self
+                        deviceName = dev.name!
+                    }
+                    else
+                    {
+                        deviceName = " "
+                    }
+                    
+                    // Verifica se o dispositivo local é nulo
+                    if let activeCentralManager = activeCentralManager{
+                        // Para de procurar outros dispositivos
+                        activeCentralManager.stopScan()
+                        
+                        // Aqui para o loading
+                        RappleActivityIndicatorView.stopAnimating()
+                        
+                        // Conecta a este dispositvo o clicado anteriormente
+                        activeCentralManager.connectPeripheral(dev, options: nil)
+                        if let _ = navigationController{
+                            navigationItem.title = "Connecting \(deviceName)"
+                        }
+                    }
+                    
+                    /*
+                    
+                    Só vai dar pra saber se funfa se tiver o bluetooth
+                    
+                    */
+                    
+                    
+                    return true
+                }
+                
+            }
+            print(discoveredPeripheralArray)
+            
+            
+        }
+        return false
         
     }
     
@@ -225,6 +311,17 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.grayColor()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        
+        
+        
+        
+    }
     
     
     
