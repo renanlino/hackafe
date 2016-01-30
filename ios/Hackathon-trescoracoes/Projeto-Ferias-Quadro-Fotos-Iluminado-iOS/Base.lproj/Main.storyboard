@@ -4,79 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Hackathon_trescoracoes" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFR-1T-NcA">
-                                <rect key="frame" x="119" y="563" width="136" height="30"/>
-                                <state key="normal" title="Mostra Dispositivos">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="90.5" y="-386.5"/>
-        </scene>
-        <!--Dispositivos Bluetooth-->
-        <scene sceneID="oZi-6D-SUS">
-            <objects>
-                <tableViewController id="zrl-2H-BTU" customClass="DispositivosTableViewController" customModule="Hackathon_trescoracoes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" id="ipo-5n-MlO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="dvm-mj-d5L" detailTextLabel="uNn-8K-e9B" rowHeight="71" style="IBUITableViewCellStyleValue1" id="MHh-S7-Es5">
-                                <rect key="frame" x="0.0" y="22" width="375" height="71"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MHh-S7-Es5" id="hWN-GV-7q1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dvm-mj-d5L">
-                                            <rect key="frame" x="15" y="26" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uNn-8K-e9B">
-                                            <rect key="frame" x="318.5" y="26" width="41.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="zrl-2H-BTU" id="ltV-FO-qU9"/>
-                            <outlet property="delegate" destination="zrl-2H-BTU" id="XZ3-Dx-75j"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Dispositivos Bluetooth" id="vxH-9F-cP2"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qjY-uw-PrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="958.5" y="379.5"/>
-        </scene>
         <!--Cafeteira View Controller-->
         <scene sceneID="jCb-kq-ys3">
             <objects>
@@ -176,6 +103,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="definirHorario:" destination="7rU-jA-ZjL" eventType="touchUpInside" id="Wrw-uz-CJh"/>
+                                    <segue destination="VrU-hb-Vni" kind="show" id="RHg-yl-3rJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcI-v2-cIN">
@@ -194,23 +122,75 @@
                                     <action selector="podePreparar:" destination="7rU-jA-ZjL" eventType="touchUpInside" id="AMu-ME-cov"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iwE-h0-yhS">
-                                <rect key="frame" x="0.0" y="151" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="475830959.826801">
-                                    <!--2016-01-30 07:15:59 +0000-->
-                                </date>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="datepicker" destination="iwE-h0-yhS" id="zw7-bK-ZVP"/>
+                        <segue destination="Lv1-Xu-xRR" kind="show" identifier="segueResultado" id="tyN-Zg-iWW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHY-CX-i7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1483.5" y="1169.5"/>
+        </scene>
+        <!--Programar Cafe View Controller-->
+        <scene sceneID="aI2-ea-EG0">
+            <objects>
+                <viewController id="VrU-hb-Vni" customClass="ProgramarCafeViewController" customModule="Hackathon_trescoracoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTq-4Z-r4U"/>
+                        <viewControllerLayoutGuide type="bottom" id="0NS-Qd-Lpn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1aH-mS-3a6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-20" translatesAutoresizingMaskIntoConstraints="NO" id="so4-mg-6tp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tps-Bn-Ahx">
+                                <rect key="frame" x="10" y="222" width="355" height="224"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ujg-Xr-mp8">
+                                        <rect key="frame" x="14" y="8" width="326" height="208"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="475836901.36285001">
+                                            <!--2016-01-30 08:55:01 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swv-hu-iz3">
+                                <rect key="frame" x="86" y="497" width="203" height="76"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.13725490200000001" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="Programar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="podePreparar:" destination="7rU-jA-ZjL" eventType="touchUpInside" id="kka-NF-2cf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Digite a data e o horário do seu café" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acy-pa-cXo">
+                                <rect key="frame" x="70" y="112" width="234" height="73.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3IW-w0-kUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483.5" y="2058.5"/>
         </scene>
         <!--Resultado View Controller-->
         <scene sceneID="ewH-Oh-j6H">
@@ -249,56 +229,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSd-oc-el6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1970.5" y="1169.5"/>
-        </scene>
-        <!--Status-->
-        <scene sceneID="8o1-XH-NEi">
-            <objects>
-                <viewController title="Status" id="FVz-Z2-Rco" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QPk-oo-jVB"/>
-                        <viewControllerLayoutGuide type="bottom" id="u6B-5j-W1p"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Jz-qU-o7f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cafe-3-Coracoes" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-7i-Sgc">
-                                <rect key="frame" x="67" y="135" width="240" height="185"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mi-cg-dFd">
-                                <rect key="frame" x="67" y="379" width="245" height="39"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1yz-dj-sTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2056.5" y="379.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ads-ci-RbP">
-            <objects>
-                <viewController id="sFv-6U-iHD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dCy-ji-Fyn"/>
-                        <viewControllerLayoutGuide type="bottom" id="vwA-yW-ft5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I18-Ff-o0L">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pxN-IM-vUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2473.5" y="379.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UdY-Gj-nG4">
@@ -365,7 +295,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Cafe-3-Coracoes" width="734" height="740"/>
         <image name="background-20" width="3396" height="6040"/>
         <image name="cafe_big" width="1155" height="1155"/>
         <image name="cafe_small" width="996" height="996"/>

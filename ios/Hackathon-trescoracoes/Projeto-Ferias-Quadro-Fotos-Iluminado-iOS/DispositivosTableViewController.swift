@@ -60,7 +60,7 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
     }
     
     @IBAction func conectaCafeteira(sender: AnyObject) {
-        RappleActivityIndicatorView.startAnimatingWithLabel("Carregando...",attributes: RappleAppleAttributes)
+        RappleActivityIndicatorView.startAnimatingWithLabel("Conectando...",attributes: RappleAppleAttributes)
         
         
         abriuTela = false
@@ -141,11 +141,15 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
         // Verifica se o dispositivo é nulo
         //Verifica se o dispositivo que vou me conectar é nulo
         // Descobre os servicos deste dispositivo
+        
+        print(peripheralDevice)
         if let peripheralDevice = peripheralDevice{
             peripheralDevice.discoverServices(nil)
             // Muda o texto da navigation Controller
             if let _ = navigationController {
                 navigationItem.title = "Connected to \(deviceName)"
+                // Aqui para o loading
+                RappleActivityIndicatorView.stopAnimating()
             }
         }
         
@@ -164,25 +168,19 @@ class DispositivosTableViewController: UIViewController, CBCentralManagerDelegat
             // Pega o valor correspondente do clique no vetor de dispositivos
             
             for dev in discoveredPeripheralArray {
-                if dev.name == "Flex" {
+                if dev.name == "CafeBLE" {
                     
                     // Delega o disposivo conectado na classe (conecta do dispositivo)
-                    if let peripheralDevice = peripheralDevice{
-                        peripheralDevice.delegate = self
-                        deviceName = dev.name!
-                    }
-                    else
-                    {
-                        deviceName = " "
-                    }
+                    dev.delegate = self
+                    deviceName = dev.name!
+                    
+                    deviceName = " "
                     
                     // Verifica se o dispositivo local é nulo
                     if let activeCentralManager = activeCentralManager{
                         // Para de procurar outros dispositivos
                         activeCentralManager.stopScan()
                         
-                        // Aqui para o loading
-                        RappleActivityIndicatorView.stopAnimating()
                         
                         // Conecta a este dispositvo o clicado anteriormente
                         activeCentralManager.connectPeripheral(dev, options: nil)

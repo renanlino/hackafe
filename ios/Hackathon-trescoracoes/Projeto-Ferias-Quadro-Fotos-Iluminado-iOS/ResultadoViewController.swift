@@ -15,7 +15,6 @@ class ResultadoViewController: UIViewController {
     @IBOutlet var labelStatus: UILabel!
     
     override func viewDidLoad() {
-        Singleton.sharedInstance.cafeAtual = "tea"
         
         let opcao = Singleton.sharedInstance.cafeAtual
         
@@ -29,9 +28,10 @@ class ResultadoViewController: UIViewController {
         }else if opcao == "tea" {
             self.imageViewBackground.image = UIImage(named: "circle_blue2")
             self.imageViewCoffe.image = UIImage(named: "cha_big")
-
+            
         }
         
     }
     
+       
 }

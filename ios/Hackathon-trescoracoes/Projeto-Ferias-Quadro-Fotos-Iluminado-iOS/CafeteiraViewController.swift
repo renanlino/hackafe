@@ -54,6 +54,15 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         self.performSegueWithIdentifier("seguePrePreparo", sender: self)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.grayColor()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+    }
+
+
     
     
 }
