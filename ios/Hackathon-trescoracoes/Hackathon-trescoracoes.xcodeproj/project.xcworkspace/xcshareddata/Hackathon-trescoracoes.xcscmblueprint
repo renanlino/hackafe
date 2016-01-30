@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "531FB2C7268464097C9D84D268158524254DC6D7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "531FB2C7268464097C9D84D268158524254DC6D7" : 0,
+    "0BFED09E8209E4117ACB5C41423BFD5EC3B74846" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1AAD1E0B-7AF1-4811-A968-876E5CBB7C90",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "531FB2C7268464097C9D84D268158524254DC6D7" : "hackafe\/",
+    "0BFED09E8209E4117ACB5C41423BFD5EC3B74846" : "..\/Documents\/Repositories\/hackathon-trescoracoes"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Hackathon-trescoracoes",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/Hackathon-trescoracoes\/Hackathon-trescoracoes.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/betovieira\/hackathon-trescoracoes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0BFED09E8209E4117ACB5C41423BFD5EC3B74846"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/renanlino\/hackafe.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "531FB2C7268464097C9D84D268158524254DC6D7"
+    }
+  ]
+}
