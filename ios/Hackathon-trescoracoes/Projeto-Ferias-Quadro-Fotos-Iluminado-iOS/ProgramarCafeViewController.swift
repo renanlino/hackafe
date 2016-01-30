@@ -19,12 +19,12 @@ class ProgramarCafeViewController: UIViewController {
     
     
     @IBAction func buttonProgramar(sender: AnyObject) {
-        var localNotification:UILocalNotification = UILocalNotification()
+        let localNotification:UILocalNotification = UILocalNotification()
         localNotification.alertAction = ""
         localNotification.alertBody = "Seu café está sendo feito neste momento"
         localNotification.fireDate = datePicker.date
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-        
+        print("Horário Programado!")
         
         
         

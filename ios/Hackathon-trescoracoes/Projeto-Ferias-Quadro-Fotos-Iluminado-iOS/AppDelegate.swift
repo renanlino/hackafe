@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
+        registerNotificationTypes()
+
         
         //var settings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes:UIUserNotificationType.Alert|UIUserNotificationType.Sound, categories: nil)
         //UIApplication.sharedApplication().registerUserNotificationSettings(settings)
@@ -47,7 +48,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func registerNotificationTypes() {
+        let types: UIUserNotificationType = [.Badge, .Sound, .Alert] 
+        
+        let one = UIMutableUserNotificationAction()
+        one.identifier = "one"
+        one.title = "One"
+        one.activationMode = .Foreground
+        one.destructive = false
+        one.authenticationRequired = false
+        
+        let two = UIMutableUserNotificationAction()
+        two.identifier = "two"
+        two.title = "Two"
+        two.activationMode = .Foreground
+        two.destructive = false
+        two.authenticationRequired = false
+        
+        let three = UIMutableUserNotificationAction()
+        three.identifier = "three"
+        three.title = "Three"
+        three.activationMode = .Foreground
+        three.destructive = false
+        three.authenticationRequired = false
+        
+        let category = UIMutableUserNotificationCategory()
+        category.identifier = "SAMPLE_CATEGORY"
+        category.setActions([one, two, three], forContext: .Default)
+        category.setActions([two, three], forContext: .Minimal)
+        
+        let categories = NSSet(object: category)
+        
+        let settings = UIUserNotificationSettings(forTypes: types, categories: categories as? Set<UIUserNotificationCategory>)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+    }
+    
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        print("Received local notification")
+    }
+    
+    func application(application: UIApplication,
+        handleActionWithIdentifier identifier: String?,
+        forLocalNotification notification: UILocalNotification,
+        completionHandler: () -> Void)
+    {
+        print("Handle action \(identifier)")
+        completionHandler()
     }
 }
 
