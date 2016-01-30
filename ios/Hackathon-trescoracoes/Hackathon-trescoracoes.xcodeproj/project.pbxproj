@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BCFFCE51C5C854F00B3A595 /* PrePreparoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */; };
 		DB8493231C5A392200171FE9 /* CafeteiraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */; };
 		DB8493851C5A3DC600171FE9 /* JSQMessagesAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB8493261C5A3DC600171FE9 /* JSQMessagesAssets.bundle */; };
 		DB8493861C5A3DC600171FE9 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8493291C5A3DC600171FE9 /* JSQSystemSoundPlayer+JSQMessages.m */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrePreparoViewController.swift; sourceTree = "<group>"; };
 		DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteiraViewController.swift; sourceTree = "<group>"; };
 		DB8493261C5A3DC600171FE9 /* JSQMessagesAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JSQMessagesAssets.bundle; sourceTree = "<group>"; };
 		DB8493281C5A3DC600171FE9 /* JSQSystemSoundPlayer+JSQMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSQSystemSoundPlayer+JSQMessages.h"; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */,
 				DB8493B61C5A404900171FE9 /* BotChatViewController.swift */,
 				DBA4DF021C5BAF20002040F5 /* Singleton.swift */,
+				8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */,
 				DBC3FAA01B3F8F3F00FC004C /* Main.storyboard */,
 				DBC3FAA31B3F8F3F00FC004C /* Images.xcassets */,
 				DBC3FAA51B3F8F3F00FC004C /* LaunchScreen.xib */,
@@ -549,6 +552,7 @@
 				DB8493A51C5A3DC600171FE9 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				DB8493A01C5A3DC600171FE9 /* JSQMessagesCellTextView.m in Sources */,
 				DB8493881C5A3DC600171FE9 /* NSString+JSQMessages.m in Sources */,
+				8BCFFCE51C5C854F00B3A595 /* PrePreparoViewController.swift in Sources */,
 				DB8493B51C5A3E1F00171FE9 /* JSQSystemSoundPlayer.m in Sources */,
 				DB9F39141B3FA84E001D1D56 /* DispositivosTableViewController.swift in Sources */,
 				DB8493941C5A3DC600171FE9 /* JSQMessagesToolbarButtonFactory.m in Sources */,
@@ -705,11 +709,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.betovieira.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Hackathon-trescoracoes";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Hackathon-trescoracoes-Brindging-Header.h";
 			};
 			name = Debug;
@@ -718,11 +725,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.betovieira.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Hackathon-trescoracoes";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Hackathon-trescoracoes-Brindging-Header.h";
 			};
 			name = Release;

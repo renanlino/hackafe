@@ -26,7 +26,7 @@ var abriuTela:Bool = false
 
 
 // é Importados todos os delegates para serem colocados na tableView
-class DispositivosTableViewController: UITableViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
+class DispositivosTableViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     weak var delegate: DispositivosBluetoothProtocol?
     
@@ -43,7 +43,11 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
     
     //Acontece quando a tela ainda não carregou os elementos
     override func viewWillAppear(animated: Bool) {
-        
+    
+    }
+    
+    @IBAction func conectaCafeteira(sender: AnyObject) {
+
         abriuTela = false
         // Limpa os elementos do dicionario
         devices.removeAll(keepCapacity: false)
@@ -52,12 +56,8 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
         // Inicializa o Manager/Dispositivo mestre (meu iphone) Bluetooth
         activeCentralManager = CBCentralManager(delegate: self, queue: nil)
         
-        //Inicia a tableView com conteudo limpo
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: Selector("update"), forControlEvents: UIControlEvents.ValueChanged)
-        self.refreshControl = refreshControl
+
     }
-    
     
     // Atualizador
     func update(){
@@ -69,7 +69,6 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
         activeCentralManager = CBCentralManager(delegate: self, queue: nil)
         
         //Para de atualizar
-        self.refreshControl?.endRefreshing()
     }
     
     //Evento quando o estado do iPhone do Bluetooth mudar
@@ -101,7 +100,6 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
             if(devices[name] == nil){
                 devices[name] = peripheral
                 devicesRSSI.append(RSSI) // Adiciona na lista da tableview
-                self.tableView.reloadData()
             }
             
             
@@ -159,6 +157,7 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
             //Muda o titulo da navBar
             if let _ = navigationController{
                 navigationItem.title = "Discovered Characteristic for \(deviceName)"
+                
             }
             deviceCharacteristics = thisCharacteristic
         }
@@ -226,87 +225,6 @@ class DispositivosTableViewController: UITableViewController, CBCentralManagerDe
         // Dispose of any resources that can be recreated.
     }
     
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 1
-        
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return devices.count
-    }
-    
-    
-    
-    //Preenche a tableView
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        // Pega a celula
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
-        
-        // Coloca os valores do dicionario (devices) em uma variavel
-        let discoveredPeripheralArray = Array(devices.values.lazy)
-        
-        
-        // Verifica se a celula é nula
-        if let cell = cell {
-            //Procura no vetor de valores de devices o nome dos devices
-            if let name = discoveredPeripheralArray[indexPath.row].name{
-                
-                //Altera o texto da label de cada célula
-                if let textLabelText = cell.textLabel {
-                    textLabelText.text = name
-                }
-                
-                //Altera a label de detalhe tambem
-                if let detailTextLabel = cell.detailTextLabel{
-                    detailTextLabel.text = devicesRSSI[indexPath.row].stringValue
-                }
-            }
-        }
-        return cell!
-    }
-    
-    // Evento de toda vez que clicarem em uma célula
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        // Se estiver pelo menos um dispositvo no vetor (proximo do raio do iPhone)
-        if (devices.count > 0){
-            
-            // Coloca os valores do dicionario em um array
-            let discoveredPeripheralArray = Array(devices.values.lazy)
-            
-            // Pega o valor correspondente do clique no vetor de dispositivos
-            peripheralDevice = discoveredPeripheralArray[indexPath.row]
-            
-            // Delega o disposivo conectado na classe (conecta do dispositivo)
-            if let peripheralDevice = peripheralDevice{
-                peripheralDevice.delegate = self
-                deviceName = peripheralDevice.name!
-            }
-            else
-            {
-                deviceName = " "
-            }
-            
-            // Verifica se o dispositivo local é nulo
-            if let activeCentralManager = activeCentralManager{
-                // Para de procurar outros dispositivos
-                activeCentralManager.stopScan()
-                
-                // Conecta a este dispositvo o clicado anteriormente
-                activeCentralManager.connectPeripheral(peripheralDevice!, options: nil)
-                if let _ = navigationController{
-                    navigationItem.title = "Connecting \(deviceName)"
-                }
-            }
-            
-        }
-    }
     
     
     

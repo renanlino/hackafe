@@ -16,16 +16,14 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         dispositivosBluetooth.delegate = self
     }
     
-    @IBAction func callCoffee(sender: AnyObject) {
-        DispositivosTableViewController.writeValue("STS\r\n")
-    }
+
     
     
     func retornaBluetooth(retorno: String) {
         // Aqui ele irá alterar os status da tela!
         // colocar o algoritmo aqui em baixo com os status importantes a serem usados!
         print("Ta vindo pra cá e retornando coisas tops no delegate")
-        DispositivosTableViewController.writeValue("STS\r\n")
+        //DispositivosTableViewController.writeValue("STS\r\n")
     }
     
     func desconectou() {
@@ -34,15 +32,36 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         
     }
     
-    
-    @IBAction func callHotWater(sender: AnyObject) {
-        print("Hot Water")
-        DispositivosTableViewController.writeValue("BUT=1\r\n")
+    @IBAction func buttonCoffee(sender: AnyObject) {
+        Singleton.sharedInstance.cafeAtual = "coffee"
+        print("coffee")
+        self.performSegueWithIdentifier("seguePrePreparo", sender: self)
+        //DispositivosTableViewController.writeValue("STS\r\n")
     }
     
     
-    @IBAction func callColdWater(sender: AnyObject) {
-        print("Cold Water")
-        DispositivosTableViewController.writeValue("START=client\r\n")
+    @IBAction func buttonExpress(sender: AnyObject) {
+        Singleton.sharedInstance.cafeAtual = "express"
+
+        print("express")
+        self.performSegueWithIdentifier("seguePrePreparo", sender: self)
+        //DispositivosTableViewController.writeValue("BUT=1\r\n")
     }
+    
+    
+    @IBAction func buttonTea(sender: AnyObject) {
+        print("tea")
+        Singleton.sharedInstance.cafeAtual = "tea"
+        
+        //DispositivosTableViewController.writeValue("START=client\r\n")
+        self.performSegueWithIdentifier("seguePrePreparo", sender: self)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        
+    }
+    
 }

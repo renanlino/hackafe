@@ -10,8 +10,7 @@ import Foundation
 
 class Singleton: NSObject {
     
-    var remetente: String?
-    var bot: String?
+    var cafeAtual: String?
     
     
     class var sharedInstance: Singleton {
