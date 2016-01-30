@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        
+        
+        //var settings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes:UIUserNotificationType.Alert|UIUserNotificationType.Sound, categories: nil)
+        //UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        //UIApplication.sharedApplication().registerForRemoteNotifications()
         // Override point for customization after application launch.
         return true
     }
@@ -41,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    }
 }
 

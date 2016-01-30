@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import PKHUD
 
 class ProgramarCafeViewController: UIViewController {
+    @IBOutlet var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    
+    
+    @IBAction func buttonProgramar(sender: AnyObject) {
+        var localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertAction = ""
+        localNotification.alertBody = "Seu café está sendo feito neste momento"
+        localNotification.fireDate = datePicker.date
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        
+        
+        
+        
+    }
     
 }

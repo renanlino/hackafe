@@ -25,6 +25,7 @@ class PrePreparoViewController: UIViewController, DispositivosBluetoothProtocol 
         
         // Se for sucesso
         //performSegueWithIdentifier("segueResultado", sender: self)
+        print("Pode aqui")
     }
     
     func desconectou() {
@@ -38,15 +39,16 @@ class PrePreparoViewController: UIViewController, DispositivosBluetoothProtocol 
     
     @IBAction func podePreparar(sender: AnyObject) {
         let opcao = Singleton.sharedInstance.cafeAtual
-        performSegueWithIdentifier("segueResultado", sender: self)
 
         if opcao == "coffee" {
-            //DispositivosTableViewController.writeValue("BTN=1")
+            DispositivosTableViewController.writeValue("BUT=1\r\n")
         } else if opcao == "express" {
-            //DispositivosTableViewController.writeValue("BTN=2")
+            DispositivosTableViewController.writeValue("BUT=2\r\n")
         }else if opcao == "tea" {
-            //DispositivosTableViewController.writeValue("BTN=3")
+            DispositivosTableViewController.writeValue("BUT=3\r\n")
         }
+        performSegueWithIdentifier("segueResultado", sender: self)
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8BCFFCE51C5C854F00B3A595 /* PrePreparoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */; };
 		DB1F02661C5CB6FE004E3140 /* ProgramarCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F02651C5CB6FE004E3140 /* ProgramarCafeViewController.swift */; };
+		DB1F02681C5CDD39004E3140 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F02671C5CDD39004E3140 /* CustomCell.swift */; };
 		DB8493231C5A392200171FE9 /* CafeteiraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */; };
 		DB9F39141B3FA84E001D1D56 /* DispositivosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F39131B3FA84E001D1D56 /* DispositivosTableViewController.swift */; };
 		DBA4DF031C5BAF20002040F5 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4DF021C5BAF20002040F5 /* Singleton.swift */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrePreparoViewController.swift; sourceTree = "<group>"; };
 		DB1F02651C5CB6FE004E3140 /* ProgramarCafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramarCafeViewController.swift; sourceTree = "<group>"; };
+		DB1F02671C5CDD39004E3140 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteiraViewController.swift; sourceTree = "<group>"; };
 		DB9F39131B3FA84E001D1D56 /* DispositivosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispositivosTableViewController.swift; sourceTree = "<group>"; };
 		DBA4DF011C5BA9A3002040F5 /* Hackathon-trescoracoes-Brindging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-trescoracoes-Brindging-Header.h"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				DBC3FAA31B3F8F3F00FC004C /* Images.xcassets */,
 				DBC3FAA51B3F8F3F00FC004C /* LaunchScreen.xib */,
 				DBC3FA9A1B3F8F3F00FC004C /* Supporting Files */,
+				DB1F02671C5CDD39004E3140 /* CustomCell.swift */,
 			);
 			name = "Hackathon-trescoracoes";
 			path = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS";
@@ -322,6 +325,7 @@
 				DBA4DF051C5C9E2D002040F5 /* ResultadoViewController.swift in Sources */,
 				8BCFFCE51C5C854F00B3A595 /* PrePreparoViewController.swift in Sources */,
 				DB9F39141B3FA84E001D1D56 /* DispositivosTableViewController.swift in Sources */,
+				DB1F02681C5CDD39004E3140 /* CustomCell.swift in Sources */,
 				DBA4DF171C5CA364002040F5 /* RappleActivityIndicatorView.swift in Sources */,
 				DB8493231C5A392200171FE9 /* CafeteiraViewController.swift in Sources */,
 				DBC3FA9D1B3F8F3F00FC004C /* AppDelegate.swift in Sources */,

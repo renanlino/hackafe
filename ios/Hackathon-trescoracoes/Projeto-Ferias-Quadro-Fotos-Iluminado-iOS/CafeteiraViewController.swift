@@ -61,8 +61,8 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
     }
-
-
+    
+    
     
     
 }

@@ -174,6 +174,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buttonProgramar:" destination="VrU-hb-Vni" eventType="touchUpInside" id="LL0-ut-EqZ"/>
                                     <action selector="podePreparar:" destination="7rU-jA-ZjL" eventType="touchUpInside" id="kka-NF-2cf"/>
                                 </connections>
                             </button>
@@ -187,6 +188,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="ujg-Xr-mp8" id="BBo-qH-Njk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IW-w0-kUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,7 +249,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="OKc-QN-kNE" kind="relationship" relationship="rootViewController" id="oAU-dc-ubq"/>
+                        <segue destination="HfX-kj-C2i" kind="relationship" relationship="rootViewController" id="FQg-0G-FBy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fk-H0-mL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,9 +274,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hph-Zn-MkJ">
                                 <rect key="frame" x="102" y="222" width="170" height="162"/>
                                 <state key="normal" image="conectar"/>
-                                <connections>
-                                    <action selector="conectaCafeteira:" destination="OKc-QN-kNE" eventType="touchUpInside" id="21e-4a-UEo"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toque para conectar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B60-aC-wOW">
                                 <rect key="frame" x="65" y="402" width="245" height="39"/>
@@ -291,7 +292,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHJ-JK-CHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454.5" y="1174.5"/>
+            <point key="canvasLocation" x="474.5" y="1867.5"/>
+        </scene>
+        <!--Dispositivos Bluetooth-->
+        <scene sceneID="ktz-ge-3pa">
+            <objects>
+                <tableViewController id="HfX-kj-C2i" customClass="DispositivosTableViewController" customModule="Hackathon_trescoracoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="582" sectionHeaderHeight="22" sectionFooterHeight="22" id="6hi-va-tyE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="582" id="3Wu-Fa-zFE" customClass="CustomCell" customModule="Hackathon_trescoracoes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="375" height="582"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Wu-Fa-zFE" id="5mJ-P3-XAs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="581.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-20" translatesAutoresizingMaskIntoConstraints="NO" id="vNS-0K-uLa">
+                                            <rect key="frame" x="0.0" y="-86" width="375" height="703"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByG-Ve-65Y">
+                                            <rect key="frame" x="89" y="145" width="197" height="188"/>
+                                            <state key="normal" image="conectar"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toque para conectar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1a-tN-i9p">
+                                            <rect key="frame" x="65" y="357" width="245" height="39"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
+                                            <color key="textColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HfX-kj-C2i" id="7Xp-Qf-04G"/>
+                            <outlet property="delegate" destination="HfX-kj-C2i" id="lXs-Iq-KcY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Dispositivos Bluetooth" id="dAp-2q-M3s"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="XOh-AR-pL6" kind="show" identifier="segueCafeteira" id="vik-FE-zlf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZK-8W-VGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9.5" y="1187.5"/>
         </scene>
     </scenes>
     <resources>
@@ -302,4 +351,7 @@
         <image name="conectar" width="256" height="256"/>
         <image name="expresso_small" width="996" height="996"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vik-FE-zlf"/>
+    </inferredMetricsTieBreakers>
 </document>
