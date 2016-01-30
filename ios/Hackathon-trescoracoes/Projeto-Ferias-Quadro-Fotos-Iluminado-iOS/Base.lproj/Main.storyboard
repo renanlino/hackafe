@@ -194,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IW-w0-kUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483.5" y="2058.5"/>
+            <point key="canvasLocation" x="1483.5" y="2090.5"/>
         </scene>
         <!--Resultado View Controller-->
         <scene sceneID="ewH-Oh-j6H">
@@ -220,6 +220,20 @@
                                 <color key="textColor" red="0.27058823529999998" green="0.35294117650000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0e-La-Ura">
+                                <rect key="frame" x="99" y="518" width="70" height="70"/>
+                                <state key="normal" backgroundImage="tw_btn"/>
+                                <connections>
+                                    <action selector="shareWithTwitter:" destination="Lv1-Xu-xRR" eventType="touchUpInside" id="5di-dA-GQz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hB-oy-cCm">
+                                <rect key="frame" x="206" y="518" width="70" height="70"/>
+                                <state key="normal" backgroundImage="fb_btn"/>
+                                <connections>
+                                    <action selector="shareWithFace:" destination="Lv1-Xu-xRR" eventType="touchUpInside" id="Y47-8s-kBW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -292,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHJ-JK-CHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="474.5" y="1867.5"/>
+            <point key="canvasLocation" x="454.5" y="2147.5"/>
         </scene>
         <!--Dispositivos Bluetooth-->
         <scene sceneID="ktz-ge-3pa">
@@ -340,7 +354,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZK-8W-VGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9.5" y="1187.5"/>
+            <point key="canvasLocation" x="454.5" y="1151.5"/>
         </scene>
     </scenes>
     <resources>
@@ -350,8 +364,10 @@
         <image name="cha_small" width="996" height="996"/>
         <image name="conectar" width="256" height="256"/>
         <image name="expresso_small" width="996" height="996"/>
+        <image name="fb_btn" width="132" height="129"/>
+        <image name="tw_btn" width="44" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vik-FE-zlf"/>
+        <segue reference="k1d-j9-NnT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,10 +10,12 @@ import UIKit
 
 class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
     
-    var dispositivosBluetooth = DispositivosTableViewController()
+    var dispositivosBluetooth = Singleton.sharedInstance.dispositivosBluetooth
     
     override func viewDidLoad() {
-        dispositivosBluetooth.delegate = self
+        dispositivosBluetooth!.delegate = self
+        DispositivosTableViewController.writeValue("STS")
+        
     }
     
     
@@ -22,8 +24,9 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
     func retornaBluetooth(retorno: String) {
         // Aqui ele irá alterar os status da tela!
         // colocar o algoritmo aqui em baixo com os status importantes a serem usados!
+        print("RetornoD - \(retorno)")
         print("Ta vindo pra cá e retornando coisas tops no delegate")
-        //DispositivosTableViewController.writeValue("STS\r\n")
+        //        DispositivosTableViewController.writeValue("STS\r\n")
     }
     
     func desconectou() {
@@ -35,6 +38,8 @@ class CafeteiraViewController: UIViewController, DispositivosBluetoothProtocol {
     @IBAction func buttonCoffee(sender: AnyObject) {
         Singleton.sharedInstance.cafeAtual = "coffee"
         print("coffee")
+        //DispositivosTableViewController.writeValue("STS")
+        
         self.performSegueWithIdentifier("seguePrePreparo", sender: self)
     }
     

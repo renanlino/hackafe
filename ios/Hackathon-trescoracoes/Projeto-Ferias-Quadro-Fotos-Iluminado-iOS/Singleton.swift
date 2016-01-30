@@ -11,6 +11,7 @@ import Foundation
 class Singleton: NSObject {
     
     var cafeAtual: String?
+    var dispositivosBluetooth: DispositivosTableViewController?
     
     
     class var sharedInstance: Singleton {
