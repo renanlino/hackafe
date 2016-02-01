@@ -4,13 +4,28 @@
 ###Módulo BLE
 | HM10 BLE  | Conexão                         | Arduino|
 |-----------|---------------------------------|--------|
-| HM10 RX   | <---- ( 3v3 LEVEL SHIFT 5v) --- | Pino 4 |
-| HM10 TX   | ------------------------------> | Pino 5 |
-| HM10 GND  | --------- (C BC547 E) --------> | GND    |
-| HM10 VCC  | ------------------------------- | 5V     |
-| BC547 B   | ---------- (R 1k Ohm) --------> | Pino 6 |
+| HM10 RX   | < ( 3v3 LEVEL SHIFT 5v) - | Pino 4 |
+| HM10 TX   | --> | Pino 5 |
+| HM10 GND  | - (C BC547 E) -> | GND    |
+| HM10 VCC  | --- | 5V     |
+| BC547 B   | - (R 1k Ohm) > | Pino 6 |
 
-### Placa da Máquina Multibebidas/
+### Placa da Máquina Multibebidas/Painel Frontal
+| Pino da Placa | Função no Painel |
+|---------------|------------------|
+|1 | GND (vermelho no cabo flat)|
+|2 | GND |
+|3 | LED Lateral Vermelho |
+|4 | LED Lateral Amarelo |
+|5 | LED Botão Verde |
+|6 | LED Botão Azul |
+|7 | LED Botão Vermelho |
+|8 | Botão Verde |
+|9 | Botão Azul |
+|10| Botão Vermelho |
+
+### Esquemático do Painel
+![Esquemático do Painel](/images/schm.jpg)
 
 
 ##Comandos do Firmware
