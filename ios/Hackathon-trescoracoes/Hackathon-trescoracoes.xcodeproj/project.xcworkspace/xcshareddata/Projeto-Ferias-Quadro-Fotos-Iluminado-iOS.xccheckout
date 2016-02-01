@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A8941697-8947-488B-9A0D-4FB7A10A026E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Projeto-Ferias-Quadro-Fotos-Iluminado-iOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>43F2FF75574C9BC765AC1F6D4AC38CA3F8F72CC2</key>
+		<string>https://github.com/betovieira/Projeto-Ferias-Quadro-Fotos-Iluminado.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>app-ios/Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Projeto-Ferias-Quadro-Fotos-Iluminado-iOS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>43F2FF75574C9BC765AC1F6D4AC38CA3F8F72CC2</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/betovieira/Projeto-Ferias-Quadro-Fotos-Iluminado.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>43F2FF75574C9BC765AC1F6D4AC38CA3F8F72CC2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>43F2FF75574C9BC765AC1F6D4AC38CA3F8F72CC2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Projeto-Ferias-Quadro-Fotos-Iluminado</string>
+		</dict>
+	</array>
+</dict>
+</plist>

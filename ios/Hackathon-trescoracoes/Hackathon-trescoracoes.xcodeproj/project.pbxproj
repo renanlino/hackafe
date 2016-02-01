@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BCFFCE51C5C854F00B3A595 /* PrePreparoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */; };
+		DB1F02661C5CB6FE004E3140 /* ProgramarCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F02651C5CB6FE004E3140 /* ProgramarCafeViewController.swift */; };
+		DB1F02681C5CDD39004E3140 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F02671C5CDD39004E3140 /* CustomCell.swift */; };
+		DB8493231C5A392200171FE9 /* CafeteiraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */; };
+		DB9F39141B3FA84E001D1D56 /* DispositivosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9F39131B3FA84E001D1D56 /* DispositivosTableViewController.swift */; };
+		DBA4DF031C5BAF20002040F5 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4DF021C5BAF20002040F5 /* Singleton.swift */; };
+		DBA4DF051C5C9E2D002040F5 /* ResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4DF041C5C9E2D002040F5 /* ResultadoViewController.swift */; };
+		DBA4DF111C5CA23A002040F5 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA4DF101C5CA230002040F5 /* PKHUD.framework */; };
+		DBA4DF121C5CA23A002040F5 /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA4DF101C5CA230002040F5 /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBA4DF171C5CA364002040F5 /* RappleActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4DF161C5CA364002040F5 /* RappleActivityIndicatorView.swift */; };
+		DBC3FA9D1B3F8F3F00FC004C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3FA9C1B3F8F3F00FC004C /* AppDelegate.swift */; };
+		DBC3FAA21B3F8F3F00FC004C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC3FAA01B3F8F3F00FC004C /* Main.storyboard */; };
+		DBC3FAA41B3F8F3F00FC004C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC3FAA31B3F8F3F00FC004C /* Images.xcassets */; };
+		DBC3FAA71B3F8F3F00FC004C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC3FAA51B3F8F3F00FC004C /* LaunchScreen.xib */; };
+		DBC3FAB31B3F8F3F00FC004C /* Projeto_Ferias_Quadro_Fotos_Iluminado_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC3FAB21B3F8F3F00FC004C /* Projeto_Ferias_Quadro_Fotos_Iluminado_iOSTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBA4DF0D1C5CA230002040F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBA4DF081C5CA230002040F5 /* PKHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F99631FC19514FAC001F73CA;
+			remoteInfo = "PKHUD Demo";
+		};
+		DBA4DF0F1C5CA230002040F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBA4DF081C5CA230002040F5 /* PKHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F996321E19514FD8001F73CA;
+			remoteInfo = PKHUD;
+		};
+		DBA4DF131C5CA23A002040F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBA4DF081C5CA230002040F5 /* PKHUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F996321D19514FD8001F73CA;
+			remoteInfo = PKHUD;
+		};
+		DBC3FAAD1B3F8F3F00FC004C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBC3FA8F1B3F8F3F00FC004C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBC3FA961B3F8F3F00FC004C;
+			remoteInfo = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBA4DF151C5CA23A002040F5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DBA4DF121C5CA23A002040F5 /* PKHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrePreparoViewController.swift; sourceTree = "<group>"; };
+		DB1F02651C5CB6FE004E3140 /* ProgramarCafeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramarCafeViewController.swift; sourceTree = "<group>"; };
+		DB1F02671C5CDD39004E3140 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteiraViewController.swift; sourceTree = "<group>"; };
+		DB9F39131B3FA84E001D1D56 /* DispositivosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispositivosTableViewController.swift; sourceTree = "<group>"; };
+		DBA4DF011C5BA9A3002040F5 /* Hackathon-trescoracoes-Brindging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-trescoracoes-Brindging-Header.h"; sourceTree = "<group>"; };
+		DBA4DF021C5BAF20002040F5 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		DBA4DF041C5C9E2D002040F5 /* ResultadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadoViewController.swift; sourceTree = "<group>"; };
+		DBA4DF081C5CA230002040F5 /* PKHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PKHUD.xcodeproj; path = "PKHUD-master/PKHUD.xcodeproj"; sourceTree = "<group>"; };
+		DBA4DF161C5CA364002040F5 /* RappleActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RappleActivityIndicatorView.swift; path = "RappleProgressHUD-master/Pod/Classes/RappleActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		DBC3FA971B3F8F3F00FC004C /* Hackathon-trescoracoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackathon-trescoracoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC3FA9B1B3F8F3F00FC004C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC3FA9C1B3F8F3F00FC004C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBC3FAA11B3F8F3F00FC004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DBC3FAA31B3F8F3F00FC004C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DBC3FAA61B3F8F3F00FC004C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DBC3FAAC1B3F8F3F00FC004C /* Hackathon-trescoracoes.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hackathon-trescoracoes.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC3FAB11B3F8F3F00FC004C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC3FAB21B3F8F3F00FC004C /* Projeto_Ferias_Quadro_Fotos_Iluminado_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projeto_Ferias_Quadro_Fotos_Iluminado_iOSTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBC3FA941B3F8F3F00FC004C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA4DF111C5CA23A002040F5 /* PKHUD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC3FAA91B3F8F3F00FC004C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB8493B21C5A3DD100171FE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4DF161C5CA364002040F5 /* RappleActivityIndicatorView.swift */,
+				DBA4DF081C5CA230002040F5 /* PKHUD.xcodeproj */,
+				DBA4DF011C5BA9A3002040F5 /* Hackathon-trescoracoes-Brindging-Header.h */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBA4DF091C5CA230002040F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4DF0E1C5CA230002040F5 /* PKHUD Demo.app */,
+				DBA4DF101C5CA230002040F5 /* PKHUD.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBC3FA8E1B3F8F3F00FC004C = {
+			isa = PBXGroup;
+			children = (
+				DBC3FA991B3F8F3F00FC004C /* Hackathon-trescoracoes */,
+				DBC3FAAF1B3F8F3F00FC004C /* Hackathon-trescoracoesTests */,
+				DBC3FA981B3F8F3F00FC004C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBC3FA981B3F8F3F00FC004C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3FA971B3F8F3F00FC004C /* Hackathon-trescoracoes.app */,
+				DBC3FAAC1B3F8F3F00FC004C /* Hackathon-trescoracoes.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBC3FA991B3F8F3F00FC004C /* Hackathon-trescoracoes */ = {
+			isa = PBXGroup;
+			children = (
+				DB8493B21C5A3DD100171FE9 /* Frameworks */,
+				DBC3FA9C1B3F8F3F00FC004C /* AppDelegate.swift */,
+				DBA4DF021C5BAF20002040F5 /* Singleton.swift */,
+				DB9F39131B3FA84E001D1D56 /* DispositivosTableViewController.swift */,
+				DB8493221C5A392200171FE9 /* CafeteiraViewController.swift */,
+				8BCFFCE41C5C854F00B3A595 /* PrePreparoViewController.swift */,
+				DBA4DF041C5C9E2D002040F5 /* ResultadoViewController.swift */,
+				DB1F02651C5CB6FE004E3140 /* ProgramarCafeViewController.swift */,
+				DBC3FAA01B3F8F3F00FC004C /* Main.storyboard */,
+				DBC3FAA31B3F8F3F00FC004C /* Images.xcassets */,
+				DBC3FAA51B3F8F3F00FC004C /* LaunchScreen.xib */,
+				DBC3FA9A1B3F8F3F00FC004C /* Supporting Files */,
+				DB1F02671C5CDD39004E3140 /* CustomCell.swift */,
+			);
+			name = "Hackathon-trescoracoes";
+			path = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS";
+			sourceTree = "<group>";
+		};
+		DBC3FA9A1B3F8F3F00FC004C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3FA9B1B3F8F3F00FC004C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBC3FAAF1B3F8F3F00FC004C /* Hackathon-trescoracoesTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3FAB21B3F8F3F00FC004C /* Projeto_Ferias_Quadro_Fotos_Iluminado_iOSTests.swift */,
+				DBC3FAB01B3F8F3F00FC004C /* Supporting Files */,
+			);
+			name = "Hackathon-trescoracoesTests";
+			path = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOSTests";
+			sourceTree = "<group>";
+		};
+		DBC3FAB01B3F8F3F00FC004C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3FAB11B3F8F3F00FC004C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBC3FA961B3F8F3F00FC004C /* Hackathon-trescoracoes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC3FAB61B3F8F3F00FC004C /* Build configuration list for PBXNativeTarget "Hackathon-trescoracoes" */;
+			buildPhases = (
+				DBC3FA931B3F8F3F00FC004C /* Sources */,
+				DBC3FA941B3F8F3F00FC004C /* Frameworks */,
+				DBC3FA951B3F8F3F00FC004C /* Resources */,
+				DBA4DF151C5CA23A002040F5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBA4DF141C5CA23A002040F5 /* PBXTargetDependency */,
+			);
+			name = "Hackathon-trescoracoes";
+			productName = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS";
+			productReference = DBC3FA971B3F8F3F00FC004C /* Hackathon-trescoracoes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBC3FAAB1B3F8F3F00FC004C /* Hackathon-trescoracoesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC3FAB91B3F8F3F00FC004C /* Build configuration list for PBXNativeTarget "Hackathon-trescoracoesTests" */;
+			buildPhases = (
+				DBC3FAA81B3F8F3F00FC004C /* Sources */,
+				DBC3FAA91B3F8F3F00FC004C /* Frameworks */,
+				DBC3FAAA1B3F8F3F00FC004C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBC3FAAE1B3F8F3F00FC004C /* PBXTargetDependency */,
+			);
+			name = "Hackathon-trescoracoesTests";
+			productName = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOSTests";
+			productReference = DBC3FAAC1B3F8F3F00FC004C /* Hackathon-trescoracoes.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBC3FA8F1B3F8F3F00FC004C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Humberto Vieira de Castro";
+				TargetAttributes = {
+					DBC3FA961B3F8F3F00FC004C = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					DBC3FAAB1B3F8F3F00FC004C = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = DBC3FA961B3F8F3F00FC004C;
+					};
+				};
+			};
+			buildConfigurationList = DBC3FA921B3F8F3F00FC004C /* Build configuration list for PBXProject "Hackathon-trescoracoes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBC3FA8E1B3F8F3F00FC004C;
+			productRefGroup = DBC3FA981B3F8F3F00FC004C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DBA4DF091C5CA230002040F5 /* Products */;
+					ProjectRef = DBA4DF081C5CA230002040F5 /* PKHUD.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DBC3FA961B3F8F3F00FC004C /* Hackathon-trescoracoes */,
+				DBC3FAAB1B3F8F3F00FC004C /* Hackathon-trescoracoesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DBA4DF0E1C5CA230002040F5 /* PKHUD Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "PKHUD Demo.app";
+			remoteRef = DBA4DF0D1C5CA230002040F5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DBA4DF101C5CA230002040F5 /* PKHUD.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PKHUD.framework;
+			remoteRef = DBA4DF0F1C5CA230002040F5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBC3FA951B3F8F3F00FC004C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC3FAA21B3F8F3F00FC004C /* Main.storyboard in Resources */,
+				DBC3FAA71B3F8F3F00FC004C /* LaunchScreen.xib in Resources */,
+				DBC3FAA41B3F8F3F00FC004C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC3FAAA1B3F8F3F00FC004C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBC3FA931B3F8F3F00FC004C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBA4DF031C5BAF20002040F5 /* Singleton.swift in Sources */,
+				DBA4DF051C5C9E2D002040F5 /* ResultadoViewController.swift in Sources */,
+				8BCFFCE51C5C854F00B3A595 /* PrePreparoViewController.swift in Sources */,
+				DB9F39141B3FA84E001D1D56 /* DispositivosTableViewController.swift in Sources */,
+				DB1F02681C5CDD39004E3140 /* CustomCell.swift in Sources */,
+				DBA4DF171C5CA364002040F5 /* RappleActivityIndicatorView.swift in Sources */,
+				DB8493231C5A392200171FE9 /* CafeteiraViewController.swift in Sources */,
+				DBC3FA9D1B3F8F3F00FC004C /* AppDelegate.swift in Sources */,
+				DB1F02661C5CB6FE004E3140 /* ProgramarCafeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC3FAA81B3F8F3F00FC004C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC3FAB31B3F8F3F00FC004C /* Projeto_Ferias_Quadro_Fotos_Iluminado_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBA4DF141C5CA23A002040F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PKHUD;
+			targetProxy = DBA4DF131C5CA23A002040F5 /* PBXContainerItemProxy */;
+		};
+		DBC3FAAE1B3F8F3F00FC004C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBC3FA961B3F8F3F00FC004C /* Hackathon-trescoracoes */;
+			targetProxy = DBC3FAAD1B3F8F3F00FC004C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBC3FAA01B3F8F3F00FC004C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBC3FAA11B3F8F3F00FC004C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DBC3FAA51B3F8F3F00FC004C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBC3FAA61B3F8F3F00FC004C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBC3FAB41B3F8F3F00FC004C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBC3FAB51B3F8F3F00FC004C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBC3FAB71B3F8F3F00FC004C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.betovieira.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "Hackathon-trescoracoes";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Hackathon-trescoracoes-Brindging-Header.h";
+			};
+			name = Debug;
+		};
+		DBC3FAB81B3F8F3F00FC004C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.betovieira.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "Hackathon-trescoracoes";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOS/Hackathon-trescoracoes-Brindging-Header.h";
+			};
+			name = Release;
+		};
+		DBC3FABA1B3F8F3F00FC004C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.betovieira.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "Hackathon-trescoracoes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon-trescoracoes.app/Hackathon-trescoracoes";
+			};
+			name = Debug;
+		};
+		DBC3FABB1B3F8F3F00FC004C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Projeto-Ferias-Quadro-Fotos-Iluminado-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.betovieira.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "Hackathon-trescoracoes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hackathon-trescoracoes.app/Hackathon-trescoracoes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBC3FA921B3F8F3F00FC004C /* Build configuration list for PBXProject "Hackathon-trescoracoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC3FAB41B3F8F3F00FC004C /* Debug */,
+				DBC3FAB51B3F8F3F00FC004C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBC3FAB61B3F8F3F00FC004C /* Build configuration list for PBXNativeTarget "Hackathon-trescoracoes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC3FAB71B3F8F3F00FC004C /* Debug */,
+				DBC3FAB81B3F8F3F00FC004C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBC3FAB91B3F8F3F00FC004C /* Build configuration list for PBXNativeTarget "Hackathon-trescoracoesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC3FABA1B3F8F3F00FC004C /* Debug */,
+				DBC3FABB1B3F8F3F00FC004C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBC3FA8F1B3F8F3F00FC004C /* Project object */;
+}
