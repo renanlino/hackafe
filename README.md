@@ -10,16 +10,19 @@
 
 ##Comandos do Firmware
 * STS
-  * STS+OK: Pronta para funcionar
-  * STS+ERR: Erro desconhecido
-  * STS+HEAT: Aquecendo
-  * STS+WATER: Sem água
-  * STS+DESCAL: Necessita descalcificação
-  * STS+LONG: Muito tempo desligada
-  * STS+SLEEP: Economia de Energia
+  * STS+abcde
+    * a: LED Lateral Vermelho
+    * b: LED Lateral Amarelo
+    * c: LED Botão Vermelho/Laranja
+    * d: LED Botão Azul
+    * e: LED Botão
+  * Onde a, b, c, d, e e pode ser:
+    * 0 = LED fixo desligado
+    * 1 = LED fixo ligado
+    * 2 = LED piscando
 * BUT=N
   * Acionamento do botão N [1-3]
-  * BUT+OK || BUT+ERR:
-* START=client
+  * BUT+OK || BUT+ERR:range
+* START=client (useless)
   * Informa o nome do usuário
   * START+OK
