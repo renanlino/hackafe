@@ -25,7 +25,7 @@
 |10| Botão Vermelho |
 
 ### Esquemático do Painel
-![Esquemático do Painel](/images/schm.jpeg)
+![Esquemático do Painel](/images/schme.jpeg)
 
 
 ##Comandos do Firmware
