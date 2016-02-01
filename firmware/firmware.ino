@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-#define ledLatVerm 13
+#define ledLatVerm A4
 #define ledLatAmar 12
 #define ledBotVerd 11
 #define ledBotAzul 10
@@ -29,11 +29,10 @@ void setup() {
   BLE.begin(9600);
 
   /*LEDS*/
-  pinMode(ledLatVerm, INPUT_PULLUP);
   pinMode(ledLatAmar, INPUT_PULLUP);
   pinMode(ledBotVerd, INPUT_PULLUP);
   pinMode(ledBotAzul, INPUT_PULLUP);
-  pinMode(ledBotVerm, INPUT_PULLUP);
+  pinMode(13, INPUT);
 
   /*Inicia botões no modo tri-state*/
   pinMode(bot1, INPUT);
@@ -54,7 +53,7 @@ void setup() {
   delay(500);
   if ( !BLE.find("OK") ) {
     if (DEBUG) Serial.println("ERRO FATAL: Não foi possível estabelecer comunicação com o modulo BLE!");
-    for(;;);
+    //for(;;);
   } else {
     if (DEBUG) Serial.println("Comunicacao com o modulo BLE realizada.");
   }
@@ -69,7 +68,7 @@ void loop() {
   cmd = BLE.readStringUntil('\n');
   
 
-  if (cmd.length() >= 5) {
+  if (cmd.length() >= 3) {
     
     if ( cmd.startsWith("START+") ) {
       clientName = cmd.substring( cmd.indexOf("=") + 1 );
@@ -81,6 +80,8 @@ void loop() {
 
      /*interpretar e printar o resultado para o modulo BLE*/
      //BLE.println(RESULTADO DO STATUS)
+     for(int i = 0; i < 5; i++) BLE.print(ans[i]);
+     BLE.println();
      
      if (DEBUG) {
       for(int i = 0; i < 5; i++) Serial.print(ans[i]);
@@ -117,10 +118,14 @@ void detectarPiscando(int * ans, int period)
   int ledLatVermVec[NUM_READ], ledLatAmarVec[NUM_READ], ledBotVerdVec[NUM_READ],
       ledBotAzulVec[NUM_READ], ledBotVermVec[NUM_READ], auxRead, sum;
   for ( int i = 0; i < NUM_READ; i++ ) {
-    ledLatVermVec[i] = digitalRead(ledLatVerm);
+    auxRead  = analogRead(ledLatVerm);
+    if(auxRead > 300) ledLatVermVec[i] = 1;
+    else ledLatVermVec[i] = 0;
+    
     ledLatAmarVec[i] = digitalRead(ledLatAmar);
     ledBotVerdVec[i] = digitalRead(ledBotVerd);
     ledBotAzulVec[i] = digitalRead(ledBotAzul);
+    
     auxRead  = analogRead(ledBotVerm);
     if(auxRead > 300) ledBotVermVec[i] = 1;
     else ledBotVermVec[i] = 0;
