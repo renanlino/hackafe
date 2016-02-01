@@ -2,6 +2,7 @@
 
 ##Conexões
 ###Módulo BLE
+| HM10 BLE  | Conexão                         | Arduino|
 | HM10 RX   | <---- ( 3v3 LEVEL SHIFT 5v) --- | Pino 4 |
 | HM10 TX   | ------------------------------> | Pino 5 |
 | HM10 GND  | --------- (C BC547 E) --------> | GND    |
