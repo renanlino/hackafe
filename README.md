@@ -1,4 +1,5 @@
-#Hackathon 3 Corações CPBR9
+#HackaCoffee - Hackathon 3 Corações CPBR9 
+[saiba mais aqui](http://www.mexidodeideias.com.br/eventos/um-hackathon-cafeinado-na-campus-party-brasil/)
 
 ##Conexões
 ###Módulo BLE
