@@ -1,5 +1,10 @@
 #HackaCoffee - Hackathon 3 Corações CPBR9 
-[saiba mais aqui](http://www.mexidodeideias.com.br/eventos/um-hackathon-cafeinado-na-campus-party-brasil/)
+Winning team of the [hackathon](https://twitter.com/3coracoes/status/693587047345451010) at Campus Party Brazil 2016
+
+[Saiba mais do evento aqui](http://www.mexidodeideias.com.br/eventos/um-hackathon-cafeinado-na-campus-party-brasil/)
+
+![Grupo Vencedor](https://raw.githubusercontent.com/ezefranca/hackafe/master/grupo.png)
+
 
 ##Conexões
 ###Módulo BLE
