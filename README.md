@@ -1,4 +1,4 @@
-#HackaCoffee - Hackathon 3 Corações CPBR9 
+# HackaCoffee - Hackathon 3 Corações CPBR9
 Winning team of the [hackathon](https://twitter.com/3coracoes/status/693587047345451010) at Campus Party Brazil 2016
 
 [Saiba mais do evento aqui](http://www.mexidodeideias.com.br/eventos/um-hackathon-cafeinado-na-campus-party-brasil/)
@@ -6,8 +6,8 @@ Winning team of the [hackathon](https://twitter.com/3coracoes/status/69358704734
 ![Grupo Vencedor](https://raw.githubusercontent.com/ezefranca/hackafe/master/grupo.png)
 
 
-##Conexões
-###Módulo BLE
+## Conexões
+### Módulo BLE
 | HM10 BLE  | Conexão                         | Arduino|
 |-----------|---------------------------------|--------|
 | HM10 RX   | < ( 3v3 LEVEL SHIFT 5v) - | Pino 4 |
@@ -34,7 +34,7 @@ Winning team of the [hackathon](https://twitter.com/3coracoes/status/69358704734
 ![Esquemático do Painel](/images/schme.jpeg)
 
 
-##Comandos do Firmware
+## Comandos do Firmware
 * STS
   * STS+abcde
     * a: LED Lateral Vermelho
