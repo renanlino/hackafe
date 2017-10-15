@@ -31,7 +31,7 @@ Winning team of the [hackathon](https://twitter.com/3coracoes/status/69358704734
 |10| Botão Vermelho |
 
 ### Esquemático do Painel
-![Esquemático do Painel](/images/schme.jpeg)
+![Esquemático do Painel](https://raw.githubusercontent.com/afrodev/hackafe/master/images/schemepng.png)
 
 
 ## Comandos do Firmware
